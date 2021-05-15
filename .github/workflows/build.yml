@@ -44,9 +44,9 @@ jobs:
       - name: M60 Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 m60_nrf52840_m2.uf2
+        run: cp build/zephyr/zmk.uf2 m60_nrf52840_m2-${{ steps.timestamp.outputs.timestamp }}.uf2
       - name: Archive (M60)
         uses: actions/upload-artifact@v2
         with:
           name: firmware-${{ steps.timestamp.outputs.timestamp }}
-          path: m60_nrf52840_m2.uf2
+          path: m60_nrf52840_m2-${{ steps.timestamp.outputs.timestamp }}.uf2
