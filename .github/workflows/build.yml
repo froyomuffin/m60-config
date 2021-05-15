@@ -9,6 +9,9 @@ jobs:
       image: zmkfirmware/zmk-build-arm:2.4
     name: Build
     steps:
+      - name: Define build timestamp
+        id: timestamp
+        run: echo "::set-output name=timestamp::$(date +'%Y%m%d-%T')"
       - name: Checkout
         uses: actions/checkout@v2
       - name: Cache west modules
@@ -45,5 +48,5 @@ jobs:
       - name: Archive (M60)
         uses: actions/upload-artifact@v2
         with:
-          name: firmware
+          name: firmware-${{ steps.timestamp.outputs.timestamp }}
           path: m60_nrf52840_m2.uf2
