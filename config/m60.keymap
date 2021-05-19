@@ -30,9 +30,9 @@
 			>;
 		};
 
-		fn_layer {
+		fn_layer_1 {
 			bindings = <
-&kp GRAVE  &kp C_BRI_DEC   &kp C_BRI_INC   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8   &kp F9   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_EJECT
+&trans  &kp C_BRI_DEC   &kp C_BRI_INC   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8   &kp F9   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_EJECT
 &trans         &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &trans
 &trans           &none     &none     &none     &none     &none     &none     &none     &none     &none     &none      &none      &trans
 &trans              &none     &none     &none      &none      &none      &none      &none     &kp C_PREV   &kp C_PP   &kp C_NEXT    &trans
@@ -40,9 +40,9 @@
 			>;
 		};
 
-		control_layer {
+		fn_layer_2 {
 			bindings = <
-&trans &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none   &none   &none   &none   &none   &out OUT_USB &out OUT_BLE   &bootloader
+&kp GRAVE  &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none   &none   &none   &none   &none   &out OUT_USB &out OUT_BLE   &bootloader
 &trans         &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &reset
 &trans           &none     &none     &none     &none     &none     &none     &none     &none     &none     &none      &none      &bt BT_CLR 
 &trans              &none     &none     &none      &none      &none      &none      &none      &none      &none      &none      &trans
