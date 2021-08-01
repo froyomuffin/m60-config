@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Define build timestamp
         id: timestamp
-        run: echo "::set-output name=timestamp::$(date +'%Y%m%d-%H%M%S')"
+        run: echo "::set-output name=timestamp::$(date +'%H%M%S-%d%m%Y')"
       - name: Checkout
         uses: actions/checkout@v2
       - name: Cache west modules
